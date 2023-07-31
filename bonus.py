@@ -1,4 +1,6 @@
 meals = ['shoes', 'shirts', 'jeans']
+meals.sort()
 
-for meal in meals:
-    print(meal.capitalize())
+for index, meal in enumerate(meals):
+    row = f"{index+1}.{meal.capitalize()}"
+    print(row)
