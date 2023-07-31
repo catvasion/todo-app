@@ -1,27 +1,31 @@
-user_prompt = "Enter a todo:" # good practice to keep variables outside of loop since it will be 
-
 todos = []
 
 while True : 
-    todo = input(user_prompt)
-    print(todo.title()) # methods . notation  AND () | can take arguements
-    todos.append(todo) # method
+    user_action = input("Type add, show, edit or exit:")
+    user_action = user_action.strip() # remove white space
     
+    match user_action:
+        case "add":
+            todo = input("Enter a todo: ")
+            todos.append(todo) # method
+        case "show":
+            for item in todos:
+                item = item.title()
+                print(item)
+        case "edit":
+            number = int(input("Number of the todo to edit:"))
+            number = number -1 
+            new_todo = input("Enter a new todo: ")
+            todos[number] = new_todo
+            
+            
+        case "exit":
+            break 
+        
+         
+print("Bye!")
 
-    
-# numbers = []
-# number = 0 
-# n = 0 
 
-# while n < 6:
-#     n = n + 1 
-#     print(n)
-#     numbers.append(n)
-#     number = n + 1 
-    
-    
-# print(numbers)
-# print(number)
 
     
 
