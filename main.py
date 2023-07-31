@@ -1,7 +1,7 @@
 todos = []
 
 while True : 
-    user_action = input("Type add, show, edit or exit:")
+    user_action = input("Type add, show, edit, remove or exit:")
     user_action = user_action.strip() # remove white space
     
     match user_action:
@@ -18,6 +18,9 @@ while True :
             number = number -1 
             new_todo = input("Enter a new todo: ")
             todos[number] = new_todo
+        case "remove":
+            number = int(input("Number of the todo to remove:"))
+            todos.pop(number - 1)
             
             
         case "exit":
