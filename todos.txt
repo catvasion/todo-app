@@ -1,0 +1,4 @@
+shower
+cook
+run
+sleep
